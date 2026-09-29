@@ -137,6 +137,23 @@ Value/Policy interpretation graphs
 Run Locally
 
 Prerequisites:pip install numpy matplotlib
+
+### Verify A* pathfinding
+
+The A* function is in the notebook under “Step 16: Path Planner on the Grid.”
+It plans on a square grid with eight possible moves per cell, each costing one
+step. Diagonal moves cannot pass through the corner of an obstacle. Invalid or
+unreachable endpoints return an empty path.
+
+From the repository root, run the focused tests with Python 3.10 or newer:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+These tests load the function directly from the notebook and require no
+third-party packages. The remaining navigation levels are notebook
+demonstrations and are not covered by this test suite.
 | Method          | Uses Map? | Learns? | Strength               | Weakness       |
 | --------------- | --------- | ------- | ---------------------- | -------------- |
 | Greedy          | ❌ No     | ❌ No  | Simple & fast          | Gets stuck     |
